@@ -60,7 +60,7 @@ const authenticateJWT = (req, res, next) => {
 };
 
 app.get('/protected', authenticateJWT, (req, res) => {
-  res.json({ message: 'This is a protected route', user: req.user });
+  res.json({ message: '{This is a protected route}', user: req.user });
 });
 
 app.listen(PORT, () => {
